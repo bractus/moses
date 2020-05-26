@@ -8,7 +8,10 @@ install:
   - pip install coveralls --quiet
 
 before_script:
-  - sh create_db.sh
+  - python manage.py db init
+  - python manage.py db migrate
+  - python manage.py db upgrade
+
 
 # command to run tests
 script: coverage run --source=app ./manage.py test
