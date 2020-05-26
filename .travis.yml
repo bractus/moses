@@ -8,6 +8,11 @@ install:
   - pip install coveralls --quiet
 
 before_script:
+  - export FLASK_DEBUG=1
+  - export FLASK_APP="run.py"
+  - export APP_SETTINGS="development"
+  - export SECRET="openthesea"
+  - export DATABASE_URL='sqlite:///app.db'
   - python manage.py db init
   - python manage.py db migrate
   - python manage.py db upgrade
