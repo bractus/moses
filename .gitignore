@@ -1,5 +1,5 @@
-__pycache__
-app.db
+*__pycache__*
+app/app.db
 migrations
 results
 save_models
