@@ -16,7 +16,7 @@ before_script:
   - python manage.py db init
   - python manage.py db migrate
   - python manage.py db upgrade
-
+  - python -m flask run
 
 # command to run tests
 script: coverage run --source=app ./manage.py test
